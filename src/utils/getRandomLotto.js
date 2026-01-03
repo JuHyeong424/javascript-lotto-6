@@ -1,4 +1,4 @@
-import {Console, Random} from "@woowacourse/mission-utils";
+import {Random} from "@woowacourse/mission-utils";
 import {printLottoList} from "../view/outputView.js";
 
 function sort(random) {
@@ -10,9 +10,8 @@ function sort(random) {
 }
 
 export async function getRandomLotto(purchaseCount) {
-  const lottoArray = Array.from(new Array(purchaseCount), () => new Array(6));
+  const lottoArray = [];
   let random;
-  let randomArray = [];
 
   for (let i = 0; i < purchaseCount; i++) {
     random = Random.pickUniqueNumbersInRange(1, 45, 6);
