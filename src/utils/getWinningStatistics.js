@@ -1,10 +1,14 @@
 import {winningStatistics} from "../data/winningStatistics.js";
+import Lotto from "../Lotto.js";
 
 export async function getWinningStatistics(lottoArray, winningArray, bonusNumber) {
   let count;
+  new Lotto(winningArray);
 
   for (let i = 0; i <lottoArray.length; i++) {
     count = 0;
+
+    new Lotto(lottoArray[i]);
 
     const include = lottoArray[i].filter(value => winningArray.includes(value));
     count = include.length;

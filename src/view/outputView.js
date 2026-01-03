@@ -7,7 +7,7 @@ export async function printLottoCount(purchaseCount) {
 }
 
 export async function printLottoList(random) {
-  Console.print(random);
+  Console.print(`[${random.join(', ')}]`);
 }
 
 export async function printResult(profitPercent) {
