@@ -7,7 +7,7 @@ class App {
     const purchase = await purchaseLotto();
     const purchaseCount = Number(purchase) / 1000;
     await printLottoCount(purchaseCount);
-    await getRandomLotto(purchaseCount);
+    const lottoArray = await getRandomLotto(purchaseCount);
   }
 }
 
